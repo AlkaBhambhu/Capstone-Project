@@ -9,3 +9,15 @@
  The sequential ensemble model derives an accuracy of 72.82% and a Recall score of 73.44%. The lift chart shows that taking the 30% of the records that are ranked by the model as “most probable reordered” yields 5 times as many reorder’s as would randomly selecting 30% of the records. 
  
  This model will help Instacart to send personalized push notifications, estimate the basket of the user, and pre-fill the cart with the products that the customer is most likely to buy. This framework will increase the value of the service by saving customers’ time and triggering new purchases through personalized push notifications.
+
+
+# Project Deliverables 
+- Introduction 
+  - Background, Problem statment & Objective
+- Data Exploration
+- Customer Segmentation
+- Association Rules
+- Feature Engineering
+- Predictive Models
+- Model Governance 
+- Presentation
