@@ -28,15 +28,36 @@
 
 | Feature          | Datatype | Description                                                                                                      |
 |------------------|----------|------------------------------------------------------------------------------------------------------------------|
-| `aisle_id`       | int64    | aisle identifer                                                                             |
-| `aisle`          | object   | aisle                                                                                             |
-| `product_id`     | float64  | Product identifer                                                                                       |
-| `product_name`   | int64    | name of the product|
-| `department_id`  | float64  | Department identifer                                                                         |
-| `department`     | object  | department name
-| `order_id`       | float64  | Order identifer                                                                                        |
-| `eval_set`       | float64  | prior/train                                                                                 |
-| `order_number`   | float64  | Order sequence number                                                                                     |
-| `order_dow`      | float64  | Hour of the day the order was placed                                           |
-| `order_hour_of_the_day`  | int64    | Size by square feet                                                                                              |
-| `days_since_prior` | int64 | days since the last order, capped at 30
+| `aisle_id`       | integer    | aisle identifer                                                                             |
+| `aisle`          | string   | aisle                                                                                             |
+| `product_id`     | integer  | Product identifer                                                                                       |
+| `product_name`   | string    | name of the product|
+| `department_id`  | integer  | Department identifer                                                                         |
+| `department`     | string  | department name
+| `order_id`       | integer  | Order identifer                                                                                        |
+| `eval_set`       | string  | prior/train,  where "prior": orders prior to that users most recent order & "train": most recent orders                                                                               
+| `order_number`   | integer  | Order sequence number                                                                                     |
+| `order_dow`      | integer  | Hour of the day the order was placed                                           |
+| `order_hour_of_the_day`  | integer    | Size by square feet                                                                                              |
+| `days_since_prior` | integer | days since the last order, capped at 30
+
+### Added Features
+
+| Feature                   | Datatype       | Description                                                                                                      |
+|---------------------------|----------------|------------------------------------------------------------------------------------------------------------------|
+| `total_orders_per_user`   | integer    | Number of orders by a user|
+| `total_products_per_user`   | integer    | Number of products bought by a user |
+| `unique_products_per_user`  | integer | Number of unique products bought by a user | 
+| `total_reorders_per_user` |  | Number of reordered products by a user |
+| `reorder_ratio_per_user` |  | Average of reorders by a user |
+| `avg_gap_in_orders_per_user` |  | Average number of days since prior order |
+| `prod_reorder_ratio` |  | Average reorders for a product |
+| `num_orders_for_prod` |  | Total number of orders for a product |
+| `avg_cart_order_of_product` |  | Average sequence in which a product is added to the cart |
+| `is_organic` | | 1 if a product is organic, else 0 |
+| `is_vegan` | | 1 if a product is vegan, else 0| 
+| `is_Gluten-free` |  | 1 if a product is gluten-free, else 0 |
+| `total_prod_by_user` |  | Number of orders per product by a user |
+| `prod_reorder_by_user` |  | Number of reorders per product by a user |
+| `prod_reorder_ratio_by_user` |  | Average reorders per product by a user |
+| `days_since_prior_prod_user` |  | Average days since prior order for a product by a user |
