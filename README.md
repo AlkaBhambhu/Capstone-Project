@@ -48,16 +48,23 @@
 | `total_orders_per_user`   | integer    | Number of orders by a user|
 | `total_products_per_user`   | integer    | Number of products bought by a user |
 | `unique_products_per_user`  | integer | Number of unique products bought by a user | 
-| `total_reorders_per_user` |  | Number of reordered products by a user |
-| `reorder_ratio_per_user` |  | Average of reorders by a user |
-| `avg_gap_in_orders_per_user` |  | Average number of days since prior order |
-| `prod_reorder_ratio` |  | Average reorders for a product |
-| `num_orders_for_prod` |  | Total number of orders for a product |
-| `avg_cart_order_of_product` |  | Average sequence in which a product is added to the cart |
-| `is_organic` | | 1 if a product is organic, else 0 |
-| `is_vegan` | | 1 if a product is vegan, else 0| 
-| `is_Gluten-free` |  | 1 if a product is gluten-free, else 0 |
-| `total_prod_by_user` |  | Number of orders per product by a user |
-| `prod_reorder_by_user` |  | Number of reorders per product by a user |
-| `prod_reorder_ratio_by_user` |  | Average reorders per product by a user |
-| `days_since_prior_prod_user` |  | Average days since prior order for a product by a user |
+| `total_reorders_per_user` | float | Number of reordered products by a user |
+| `reorder_ratio_per_user` | float | Average of reorders by a user |
+| `avg_gap_in_orders_per_user` | float | Average number of days since prior order |
+| `prod_reorder_ratio` | integer | Average reorders for a product |
+| `num_orders_for_prod` | integer | Total number of orders for a product |
+| `avg_cart_order_of_product` | float | Average sequence in which a product is added to the cart |
+| `is_organic` | integer | 1 if a product is organic, else 0 |
+| `is_vegan` | integer | 1 if a product is vegan, else 0| 
+| `is_Gluten-free` | integer | 1 if a product is gluten-free, else 0 |
+| `total_prod_by_user` |  integer | Number of orders per product by a user |
+| `prod_reorder_by_user` | integer | Number of reorders per product by a user |
+| `prod_reorder_ratio_by_user` | integer | Average reorders per product by a user |
+| `days_since_prior_prod_user` | integer | Average days since prior order for a product by a user |
+
+### Target
+| Feature                   | Datatype       | Description                                                                                                      |
+|---------------------------|----------------|------------------------------------------------------------------------------------------------------------------|
+| `redordered`                | integer        | 1 if this product has been ordered by a user, 0 otherwise
+
+---
